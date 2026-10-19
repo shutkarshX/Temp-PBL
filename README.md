@@ -1,7 +1,29 @@
-# Integrated National Citizen Services Platform
+# Integrated National Citizen Services Platform — OS Simulator
 
-Operating Systems PBL — Group 66
+An educational simulator for demonstrating Operating System concepts through synthetic citizen-service requests. It does **not** connect to real government systems.
 
-This repository contains an educational simulator for citizen-service request processing using Operating Systems concepts. It uses synthetic demo data only and does not connect to real government services.
+## Current baseline
+- Request/process model with NEW, READY, RUNNING, WAITING, and TERMINATED states.
+- FCFS scheduling with deterministic processing order.
+- JSON persistence for demo requests.
+- Unit tests for scheduler behavior and storage.
 
-The first baseline will demonstrate process states, FCFS scheduling, and JSON persistence. See the source files and tests for the features actually implemented.
+`WAITING` is defined as a process state but the initial sequential baseline does not yet simulate blocking/wakeup. Synchronization, concurrent processing, deadlock experiments, role-based access, and additional schedulers are not implemented in this baseline.
+
+## Requirements
+- Python 3.10+ (standard library only)
+
+## Run
+```bash
+python main.py
+```
+
+## Test
+```bash
+python -m unittest discover -s tests -v
+```
+
+## Repository note
+This code is currently hosted in [shutkarshX/Temp-PBL](https://github.com/shutkarshX/Temp-PBL). The repository name is temporary/generic and should be renamed to a project-specific name when repository administration is available.
+
+Only synthetic IDs and demo records are used. Do not enter real citizen personal information.
